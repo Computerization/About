@@ -1,7 +1,7 @@
 # Summary
 
 ## Getting Started
-* [Computerization（C社）是什么](README.md)
+* [C社是什么](README.md)
 * [C社都做些什么](activities.md)
 
 ## About SAM
@@ -12,6 +12,6 @@
 * [我们的代码规范](SAM/codestyle.md)
 
 ## About Learning Sessions
-* [NOIP备赛](LEARNING/NOIP.md)
-* [MATLAB](LEARNING/MATLAB.md)
-* [LaTeX](LEARNING/LaTeX.md)
+* [NOIP备赛](learning/NOIP.md)
+* [MATLAB与数学建模](learning/MATLAB.md)
+* [LaTeX](learning/LaTeX.md)

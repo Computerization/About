@@ -1,44 +1,110 @@
-# C社是什么
+# 关于 Computerization 世外信息化社
 
-我们是一个长期在幕后工作的，以面向社团的知识性服务为主的，一个小而精的CS社团
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Build Status](https://travis-ci.com/Computerization/about.svg?branch=master)](https://travis-ci.com/Computerization/about)
 
-### 我们的名字
-**C社 << Computerization << 信息化社**  
-我们的全称是Computerization，信息化社；  
-不过我们更喜欢被称之为C社，一是因为简洁明快，二也是因为与C语言同名（笑）
+**本项目的所有文档采用 [知识共享署名 4.0 国际许可协议](http://creativecommons.org/licenses/by/4.0/) 进行许可。**
 
-### 我们对CS的看法
-  
-我们眼中的程序，不仅仅只是作为形式载体的代码，而是其背后的程序逻辑和思想；  
-是Algorithms造就了Computer Scientists，而不是代码，  
-**这是我们坚定的信念**，也是我们自称为**CS社团**而不是编程社团的原因。  
+这是一个基于 [`gitbook-cli`](https://www.npmjs.com/package/gitbook-cli) 的 GitHub Pages 静态网站项目。
 
-也正是因此，我们有着程序设计交流的社团文化。  
+这个项目中包含了对于世外信息化社的说明：我们是谁，我们做过什么项目，我们追求的是什么。
 
-### 我们主要做些什么
+原文档位于 `master` branch 下。编译后的静态网站位于 `gh-pages` branch 下，并通过 GitHub Pages 部署在 [https://computerization.github.io/about/](https://computerization.github.io/about/)。
 
-我们的主要工作是**向各个社团和学生会提供知识类服务**。  
-比如我们编写的[SAM平台](https://github.com/Computerization/SAM/)，就曾在各种场合下独力承担了以下工作：
- - “世外杯”的报名工作
- - 新社团/五星社团/末尾社团答辩的打分和统计工作
- - 2017 Why Charity的在线拍卖
- - 2018学年社团活动教室的预约工作
- - 世外社团列表的展示
- - ……
 
-### 我们还做些什么
-在与各社合作完成各类项目之余，我们还：  
-* 组织程序设计交流
-* 备赛信息学奥林匹克(NOIP)
-* 学习离散数学、线性代数等一切可能用到的工具
+## 目录结构
 
-此外，我们也开展一系列课程和教学，如MATLAB、LaTeX、或是Python、R
+### [`/SUMMARY.md`](/SUMMARY.md)
 
-### 你为什么应该加入我们
-在C社里，你不仅仅能**与大佬们交流，获得自我提升**；你也能获得**展现自我**的平台；  
-你能和同学讲述你所知道的**计算机原理**、**网络安全知识**，  
-你能在**Techomedia**推送自己的科技文章，  
-你能在**数学社**的讲堂上讲授自己的丰富知识积累，  
-你还能在学校的**信息化平台SAM**中加入自己的想法，并帮助到其他的许许多多社团和组织；  
-  
-**在这里没有用技术实现不了的困难，只有你能不能想到的Idea**
+这个文件相当于 Table of Content，是显示在侧边栏中的内容。里面包含了各级文档标题，以及指向对应文档的路径
+
+### `/About`
+
+这个目录中包含了对于社团的基本说明：我们是谁，我们的哲学，以及对于我们活动内容的简介
+
+### `/learning`
+
+这个目录中包含了我们开展的一系列课程及说明
+
+### `/SAM`
+
+这个目录中是对于曾经的作业收发平台 SAM 以及其衍生作品的介绍。
+
+## 如何编辑并发布更改
+
+#### Git clone
+```shell
+git clone https://github.com/Computerization/about.git
+cd about
+```
+
+#### 安装 `gitbook-cli`
+
+你将需要先安装 [`npm`](https://www.npmjs.com/get-npm)，并通过 `npm` 安装 `gitbook-cli`
+
+```shell
+npm install -g gitbook-cli
+gitbook install #install all plugins dependencies
+```
+
+#### 编辑文档  
+
+**在编辑文档前，建议新建一个 branch 并提交 Pull Request**
+
+```shell
+git branch my-new-branch #please replace the branch name with something meaningful
+```
+
+**注意：所有文档均使用 Markdown 语言进行编写**
+
+你可以自由地新建目录（文件夹）并在里面添加新的 `*.md` 文件，但是为了让新文件在网站上显示，你还需要在 `SUMMARY.md` 中增加指向新文件的条目
+
+如果你已经安装了 `gitbook-cli`，那么你可以通过 `gitbook serve` 实时预览你的更改。
+
+#### 保存更改
+
+使用 git commit 保存更改并 push
+
+```shell
+git add .
+git commit -m "some message"
+git push
+```
+
+**如果你是在新的 branch 中进行编辑，那么你需要前往 [Pull Request 页面](https://github.com/Computerization/about/pulls) 提交PR**
+
+#### 部署
+
+本项目已经集成 [Travis Continuous Integration](https://travis-ci.com/Computerization/about)，因此无需手动编译与部属。
+
+在新的编辑被 merge 到 `master` branch 后，Travis CI 会自动进行编译并部署到 `gh-pages` branch 下。
+
+因此，我们建议对于所有编辑**新建 branch，并提交 Pull Request**。所有的 Pull Request 需要通过 Travis CI 的测试后才能 merge。
+
+**我们强烈不建议手动编译与部署，但我们仍提供以下教程供参考：**
+
+##### 手动编译
+```shell
+gitbook install #install all plugins dependencies
+gitbook build
+```
+
+##### 手动部署
+```shell
+# checkout to the gh-pages branch and pull latest updates
+git checkout gh-pages
+git pull origin gh-pages --rebase
+
+# copy the static site files into the current directory.
+cp -R _book/* .
+
+# add all files and commit
+git add .
+git commit -a -m "Update docs"
+
+# push to the origin
+git push origin gh-pages
+
+# checkout back to the master branch
+git checkout master
+```

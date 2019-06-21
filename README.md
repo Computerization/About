@@ -14,19 +14,36 @@
 
 ## 目录结构
 
+
+### [`/README.md`](/README.md)
+
+也就是你正在阅读的文档。本文档将作为项目指南，提供关于编辑本项目的须知。本文档的内容不在部署的网站中出现
+
 ### [`/SUMMARY.md`](/SUMMARY.md)
 
 这个文件相当于 Table of Content，是显示在侧边栏中的内容。里面包含了各级文档标题，以及指向对应文档的路径
 
-### `/About`
+### [`/book.json`](/book.json)
 
-这个目录中包含了对于社团的基本说明：我们是谁，我们的哲学，以及对于我们活动内容的简介
+这个文件是 GitBook 的配置文件。如果需要增加或修改插件，或是改变网页的样式，请编辑这个文档。关于文档格式，可参见 [GitBook Documentation](https://gitbookio.gitbooks.io/documentation/format/configuration.html)
 
-### `/learning`
+### [`/.travis.yml`](/.travis.yml)
+
+这个文件是 [Travis CI](https://travis-ci.com/Computerization/about) 的配置文件，用于自动测试、编译、与部署本项目。一般不需要改动这个文件。
+
+### [`/about.md`](/about.md)
+
+这个文件包含了对于社团的基本说明：我们是谁，我们的哲学
+
+### [`/activities.md`](/activities.md)
+
+这个文件包含了关于社团活动的简单介绍
+
+### [`/learning/`](/learning)
 
 这个目录中包含了我们开展的一系列课程及说明
 
-### `/SAM`
+### [`/SAM/`](/SAM)
 
 这个目录中是对于曾经的作业收发平台 SAM 以及其衍生作品的介绍。
 

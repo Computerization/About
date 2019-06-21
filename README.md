@@ -1,6 +1,7 @@
 # 关于 Computerization 世外信息化社
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Build Status](https://travis-ci.com/Computerization/about.svg?branch=master)](https://travis-ci.com/Computerization/about)
 
 **本项目的所有文档采用 [知识共享署名 4.0 国际许可协议](http://creativecommons.org/licenses/by/4.0/) 进行许可。**
 
@@ -48,6 +49,12 @@ gitbook install #install all plugins dependencies
 
 #### 编辑文档  
 
+**在编辑文档前，建议新建一个 branch 并提交 Pull Request**
+
+```shell
+git branch my-new-branch #please replace the branch name with something meaningful
+```
+
 **注意：所有文档均使用 Markdown 语言进行编写**
 
 你可以自由地新建目录（文件夹）并在里面添加新的 `*.md` 文件，但是为了让新文件在网站上显示，你还需要在 `SUMMARY.md` 中增加指向新文件的条目
@@ -64,15 +71,25 @@ git commit -m "some message"
 git push
 ```
 
-#### 编译并部署
+**如果你是在新的 branch 中进行编辑，那么你需要前往 [Pull Request 页面](https://github.com/Computerization/about/pulls) 提交PR**
 
-编译
+#### 部署
+
+本项目已经集成 [Travis Continuous Integration](https://travis-ci.com/Computerization/about)，因此无需手动编译与部属。
+
+在新的编辑被 merge 到 `master` branch 后，Travis CI 会自动进行编译并部署到 `gh-pages` branch 下。
+
+因此，我们建议对于所有编辑**新建 branch，并提交 Pull Request**。所有的 Pull Request 需要通过 Travis CI 的测试后才能 merge。
+
+**我们强烈不建议手动编译与部署，但我们仍提供以下教程供参考：**
+
+##### 手动编译
 ```shell
 gitbook install #install all plugins dependencies
 gitbook build
 ```
 
-部署
+##### 手动部署
 ```shell
 # checkout to the gh-pages branch and pull latest updates
 git checkout gh-pages

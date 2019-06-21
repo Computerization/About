@@ -1,0 +1,11 @@
+{
+    "title": "关于 Computerization 世外信息化社",
+    "description": "这个项目中包含了对于世外信息化社的说明：我们是谁，我们做过什么项目，我们追求的是什么。",
+
+    "structure": {
+        "readme": "about.md"
+    },
+
+    "plugins": [],
+    "pluginsConfig": {}
+}

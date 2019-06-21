@@ -1,7 +1,7 @@
 # Summary
 
 ## Getting Started
-* [C社是什么](README.md)
+* [C社是什么](about.md)
 * [C社都做些什么](activities.md)
 
 ## About SAM
